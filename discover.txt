@@ -1,0 +1,57 @@
+Read and follow these instruction files in order:
+
+1. `.ai/01_CORE_DISCOVERY.md`
+2. `.ai/02_FRONTEND_EXTENSION.md`
+3. `.ai/03_BACKEND_EXTENSION.md`
+4. `.ai/04_MULTI_REPO_EXTENSION.md`
+
+Treat all four files as one combined instruction set.
+
+The current repository contains both frontend and backend code. First determine whether it is:
+
+- A monorepo with separate frontend and backend applications
+- A single full-stack application
+- A backend application with an embedded frontend
+- A frontend application with server-side routes or API handlers
+- A mixed repository with shared packages
+
+Document the actual repository boundaries, runtime boundaries, deployment units, shared packages, and contracts between the frontend and backend.
+
+This is a read-only discovery task.
+
+Do not modify application source code, configuration, dependencies, migrations, tests, or existing documentation, except for creating the required discovery outputs.
+
+Analyze the entire repository and generate:
+
+- `FULLSTACK_APPLICATION_CLONE_DISCOVERY.md`
+- `FULLSTACK_APPLICATION_CLONE_DISCOVERY.yaml`
+
+Write both files to:
+
+`docs/application-clone-discovery/`
+
+The discovery outputs must clearly separate:
+
+- Frontend responsibilities
+- Backend responsibilities
+- Shared modules and packages
+- Database and migration ownership
+- API and event contracts
+- Authentication and authorization enforcement
+- Runtime boundaries
+- Deployment boundaries
+- Cross-module dependencies
+- Implementation work by application or package
+
+Do not assume that frontend and backend deploy together merely because they are stored in the same repository.
+
+Where the repository contains multiple applications or packages, identify each one by its actual path and responsibility.
+
+Before finishing:
+
+- Verify that the Markdown and YAML are consistent.
+- Include concrete evidence using file paths, configuration, routes, symbols, schemas, and tests.
+- Clearly label confirmed findings, inferences, assumptions, and unknowns.
+- Identify reusable functionality before proposing new work.
+- Do not begin implementation.
+- Do not make unrelated changes.
